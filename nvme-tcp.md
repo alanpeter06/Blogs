@@ -1,4 +1,4 @@
-Using TLS to secure a NVMe TCP Connection
+# Using TLS to secure a NVMe TCP Connection
 
 To secure remote storage access in NVMe over Fabrics, traditional approaches rely on specialized interconnects like RDMA or Fibre Channel, which can be complex and costly to deploy. The NVMe Specification \[[1](https://nvmexpress.org/specifications/)\] introduces two mechanisms to address this by enabling secure, low-latency access over standard TCP/IP networks: (1) NVMe In-Band Authentication, supported by Oracle UEK7, which uses a challenge-response protocol with a shared secret for secure connections (see Blog - NVMe In-band Authentication \[[2](https://blogs.oracle.com/linux/post/nvme-inband-authentication)\]), and (2) Fabric Secure Channel, implemented as NVMe-TLS in the Oracle UEK8 kernel \[[3](https://blogs.oracle.com/linux/post/oracle-linux-now-includes-the-latest-linux-kernel-with-uek-8)\], which encrypts NVMe-TCP traffic to ensure data protection. These solutions leverage existing Ethernet infrastructure, simplifying deployment while maintaining robust security, and will be described by this blog.
 
